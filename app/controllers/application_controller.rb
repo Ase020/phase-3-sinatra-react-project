@@ -50,12 +50,19 @@ class ApplicationController < Sinatra::Base
     book = Book.find(params[:id])
     if book
       book.update(updated_book)
+      book.to_json
       status 200
       { message: 'Book updated successfully', book: book }.to_json
     else
       status 404
       { message: 'Book not found' }.to_json
     end
+  end
+
+  delete '/books/:id' do
+    book = Book.find(params[:id])
+    book.destroy
+    book.to_json
   end
 
 end
