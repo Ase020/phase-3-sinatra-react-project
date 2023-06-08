@@ -60,7 +60,8 @@ end
 group :production do
   gem 'puma', "~> 6.1"
   gem 'pg', "~> 1.4"
-  gem "faker", "~> 2.18"
+  gem "faker"
+  # , "~> 2.18"
 end
 
 
