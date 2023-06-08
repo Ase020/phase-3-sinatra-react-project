@@ -56,3 +56,11 @@ group :test do
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
 end
+
+group :production do
+  gem 'puma', "~> 6.1"
+  gem 'pg', "~> 1.4"
+  gem "faker", "~> 2.18"
+end
+
+

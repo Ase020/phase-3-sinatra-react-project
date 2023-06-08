@@ -11,6 +11,16 @@ test:
   <<: *default
   database: db/test.sqlite3
 
+#production:
+#  <<: *default
+#  database: db/production.sqlite3
+
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: postgresql
+  database: asebookstoredb
+  username: asebookstoredb_user
+  password: XnH8oBzPqKrP2GeoSq7kLLGALs3oRmRS
+  host: dpg-ci0pcvg2qv21rs5p41tg-a
+  port: 5432
+  pool: 5
+
